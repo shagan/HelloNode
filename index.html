@@ -1,0 +1,12 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect();
+  socket.on('news', function (data) {
+    console.log(data);
+    document.getElementById('mydata').src=data.hello;
+  });
+</script>
+
+<img id="mydata"></img>
+
+
